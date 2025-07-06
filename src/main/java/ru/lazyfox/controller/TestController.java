@@ -42,9 +42,10 @@ public class TestController {
                 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⠇⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀ \s
                 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⡿⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀
             """;
+        String html = "<html><head><meta charset='UTF-8'></head><body><pre style='font-size:16px;'>" + asciiArt + "</pre></body></html>";
         return ResponseEntity.ok()
-                .header("Content-Type", "text/plain; charset=UTF-8")
-                .body(asciiArt);
+                .header("Content-Type", "text/html; charset=UTF-8")
+                .body(html);
     }
 
 }
